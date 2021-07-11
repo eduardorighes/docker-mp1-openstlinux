@@ -1,13 +1,5 @@
-DVER:=v3.0
-DNAME:=mp1-openstlinux
-DUSER:=siana
+NAME := stm32mp1
 
 build:
-	docker build -t $(DNAME):$(DVER) . && \
-	docker tag $(DNAME):$(DVER) $(DUSER)/$(DNAME):$(DVER)
+	docker build -t $(NAME) . 
 
-push:
-	docker push $(DUSER)/$(DNAME):$(DVER)
-
-pull:
-	docker pull $(DUSER)/$(DNAME):$(DVER)

@@ -1,4 +1,4 @@
-NAME := stm32mp1
+NAME := yocto
 
 build:
 	docker build -t $(NAME) . 
